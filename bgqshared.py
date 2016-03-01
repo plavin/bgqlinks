@@ -25,7 +25,6 @@ def readNodeSet(file):
       list.append(ast.literal_eval(line))
   return list
 
-
 def addLinksForward(source, index, numHops, linkSet):
   last = source
   for i in range(1, numHops+1):
@@ -119,9 +118,12 @@ def main(argv1,argv2):
     sum += 1
     print i
   print "total number of conflicted links", sum
+#sanity checks
   print "Nodes Job 1: ", len(nodeListJobOne), " Nodes Job 2:  ", len(nodeListJobTwo), " Shared Nodes (should be 0): ", len(set(nodeListJobOne) & set(nodeListJobTwo))
   return len(conflictLinks)
 
+#tuples from job1 and job2 should be passed as command line arguments
+#where each file contains 1 5-tuple per line
 if __name__ == "__main__":
   sys.exit(main(sys.argv[1], sys.argv[2]))
 
