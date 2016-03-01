@@ -1,0 +1,4 @@
+Program: bgqlinks
+Authors: Dave Lowenthal and Patrick Lavin
+
+Purpose: Includes a utility to count shared links between 2 bgq jobsand a utility to generate a list of 2D job placements, each with a different number of shared links.
